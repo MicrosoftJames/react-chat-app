@@ -1,0 +1,242 @@
+.chat-container-outer {
+    width: 100%;
+    min-width: 300px;
+    height: 100vh;
+    background-color: #282828;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height:  calc(100vh - 30px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    background-color: #282828;
+}
+
+.chat-input {
+    bottom: 0;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    height: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+ 
+}
+
+.chat-input-inner {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.chat-input textarea {
+    width: 40%;
+    min-width: 350px;
+    min-height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    font-size: 1rem;
+    resize: none;
+    overflow: hidden;
+}
+
+.chat-input .button {
+    width: 60px;
+    min-height: 60px;
+    border-radius: 5px;
+    border: none;
+    height: auto;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.chat-input .button:active {
+    transform: translateY(2px);
+    border: 2px solid #282828; 
+  }
+
+.chat-message-username {
+    font-weight: bold;
+    margin-right: 5px;   
+}
+
+.chat-message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    min-width: 60%;
+    max-width: 60%;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.chat-message-message {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.left {
+    position: relative;
+    align-self: flex-start;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+
+.right {
+    position: relative;
+    align-self: flex-end;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.chat-messages-scroll {
+    position: relative;
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f5f5f5; /* For Firefox */
+    height: calc(100vh - 30px);
+    display: flex;
+    justify-content: center;
+}
+
+#message-scroll {
+  position: relative;
+  z-index: 2;
+}
+
+.chat-messages {
+    position: absolute;
+    top: 0;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f5f5f5; /* For Firefox */
+    margin-left: 40%;
+    margin-right: 40%;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #282828;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.chat-message-flag-left {
+    /* align-self: flex-end; */
+    position: absolute;
+    left: -10px;
+    width: 10px;
+    height: 30px;
+    clip-path: polygon(0px 0px, 20px 30px, 20px 0px, 0px 0px);
+}
+
+.chat-message-flag-right {
+    /* align-self: flex-end; */
+    position: absolute;
+    right: -10px;
+    width: 10px;
+    height: 30px;
+    clip-path: polygon(0px 0px, 20px 30px, 20px 0px, 0px 0px);
+    transform: scaleX(-1);
+    
+}
+
+.chat-message-right-color {   
+    background-color: #acc70b;
+}
+
+.chat-message-left-color {
+    background-color: #53dcff; 
+}
+
+.chat-message-content {
+    min-width: 350px;
+    max-width: 550px;
+}
+
+.user-message-details {
+    background: url('./user.png') no-repeat;
+    background-position:  0px 4px;
+    background-size: 25px 25px;
+    display: inline-block;
+    padding-left: 30px;
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.fade-box-top {
+    background : linear-gradient(rgba(40, 40, 40, 100), rgba(40, 40, 40, 0));
+    width: 90%;
+    height: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.fade-box-bottom {
+    background : linear-gradient(rgba(40, 40, 40, 0), rgba(40, 40, 40, 100));
+    width: 90%;
+    height: 15px;
+    position: fixed;
+    bottom: 90px;
+    z-index: 1;
+}
+
+#typing-dot {
+    padding-bottom: 9px;
+}
+
+ /* Typing animation for typing-dot, typing-dot-2, typing-dot-3 */
+
+
+.typing-dot {
+  animation: typing 1s infinite;
+  transform: scale(0);
+  background-color: black;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.typing-dot-1 {
+    animation-delay: 0.1s;
+}
+
+.typing-dot-2 {
+
+    animation-delay: 0.2s;
+}
+
+.typing-dot-3 {
+    animation-delay: 0.3s;
+}
+
+  
+
+  
+
+  @keyframes typing {
+    0%,
+    100% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+}
