@@ -4,7 +4,6 @@
 
         const [message, setMessage] = useState('');
         const username = 'You';
-        // const [messages, setMessages] = useState([]);
         const [userMessages, setUserMessages] = useState([]);
         const [assistantMessages, setAssistantMessages] = useState([]);
         const [isLoading, setIsLoading] = useState(false);
