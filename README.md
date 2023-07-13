@@ -1,3 +1,9 @@
+
+<p align="center" style="background-color: transparent;">
+  <img src="imgs/block-robot.png" alt="Robot Blocks" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+</p>
+
+
 ## Overview
 This is a simple project to demonstrate how React.js can be used in conjunction with Flask to create a simple chat application. The Flask application serves as a REST API for the React frontend to consume. The React frontend is a simple chat application that allows users to send messages to an OpenAI LLM.
 
